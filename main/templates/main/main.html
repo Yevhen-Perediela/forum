@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="{% url 'home' %}"><h1>FORUM</h1></a>
+        <div id="sterowanie">
+            <a href="{% url 'login' %}" ><input class="ster-butt-top" type="button" value="log"></a>
+            <a href="{% url 'reg' %}"><input class="ster-butt-top" type="button" value="reg"></a>
+            <a href="{% url 'addpost' %}" ><input id="ster-butt-bott" type="button" value="new post"></a>
+        </div>
+    </header>
+    <div id="hideblock"></div>
+    <div class="content">
+    {% block content %}
+        {% for el in art %}
+            <a href="{% url 'article_details' el.id %}">
+
+                <div class="art" onclick="openArt()">
+                    <p class="art_p">{{ el.author }}</p>
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.text }}</p>
+                </div>
+            </a>
+        {% endfor %}
+    {% endblock %}
+    </div>
+    <footer>
+        <p>&copy; 2024 Nazwa Twojej Firmy. Wszelkie prawa zastrzeżone.     <a href="{% url 'privacy' %}">Privacy</a></p>
+    </footer>
+</body>
+</html>

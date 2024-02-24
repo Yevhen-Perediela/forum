@@ -1,0 +1,193 @@
+
+body{
+    background-color: rgb(57, 57, 57);
+    color: rgba(255, 255, 255, 0.648);
+    height: 100%;
+    /* text-align: center; */
+    /* overflow: hidden; */
+}
+.content{
+    min-height: calc(100vh - 100px); /* Вираховуємо висоту, за виключенням висоти футера */
+    padding-bottom: 50px; 
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    width: 98.7%;
+    height: 100px;
+    background-color: rgb(27,27,27);
+    box-shadow: 0px 0px 30px rgb(57,57,57);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    /* margin-top: 20px; */
+    padding-top: 20px;
+    margin-bottom: 120px;
+    position: fixed;
+    @media screen and (max-width:426px) {
+        width: 97%;
+    }
+
+}
+
+#hideblock{
+    width: 100%;
+    height: 140px;
+}
+
+#sterowanie{
+    float: right;
+    border: 2px solid rgba(255, 255, 255, 0.648);
+    border-radius: 10px;
+    height: 90px;
+    width: 100px;
+    margin-top: -92px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+.ster-butt-top{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2px;
+    transition: background-color 1s;
+}
+.ster-butt-top:hover{
+    background-color: rgba(255, 255, 255, 0.648);
+    border: 0px;
+    border-radius: 2px;
+}
+#ster-butt-bott{
+    width: 85px;
+    height: 40px;
+    transition: background-color 1s;
+}
+#ster-butt-bott:hover{
+    background-color: rgba(255, 255, 255, 0.648);
+    border: 0px;
+    border-radius: 2px;
+}
+.art{
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(49, 49, 49);
+    padding: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-bottom-left-radius: 3px;
+    @media screen and (max-width:426px) {
+        width: 95%;
+        border-bottom-left-radius: 10px;
+    }
+}
+h3{
+    text-align: center;
+}
+.art p{
+    margin-left: 10px;
+}
+.art_p{
+    float: right;
+    font-size: 13px;
+}
+
+#reg_form, #login_form, #addPost_form{
+    background-color: rgb(49, 49, 49);
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    @media screen and (max-width:426px) {
+        width: 90%;
+    }
+}
+#reg_form li, span{
+    display: none;
+}
+#reg_form input, #login_form input, #addPost_form input{
+    float: right;
+}
+#addPost_form textarea{
+    height: 50px;
+    float: right;
+    scrollbar-width: 0px;
+}
+#addPost_form button{
+    margin-top: 10px;
+}
+#addPost_form input{
+    width: 307px;
+}
+#reg_form button, #login_form button, #addPost_form button{
+    padding: 5px;
+    width: 100px;
+}
+
+/* #addPost_form{
+    text-align: center;
+    } */
+
+#addcomm_form label{
+    display: none;
+}    
+#addcomm_form textarea{
+    height: 30px;
+    width: 500px;
+    @media screen and (max-width:426px) {
+        width: 95%;
+    }
+}
+#addcomm_form button{
+    padding: 3px;
+    width: 100px;
+    
+    margin-top: -15px;
+}
+.comments{
+    width: 60%;
+    border-radius: 10px;
+    background-color: rgb(49, 49, 49);
+    padding: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    margin-top: -13px;
+    border-top-right-radius: 3px;
+    border-top-left-radius:3px;
+    @media screen and (max-width:426px) {
+        width: 95%;
+    }
+}
+/* .comment{
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+} */
+.comm{
+    border: 2px dashed black;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+}
+footer{
+    width: 98.7%;
+    height: 100px;
+    background-color: rgb(27,27,27);
+    box-shadow: 0px 0px 30px rgb(57,57,57);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    /* margin-top: 20px; */
+    padding-top: 20px;
+    margin-bottom: 120px;
+    /* position: fixed; */
+    margin-bottom: 10px;
+}
+#privacy{
+    text-align: center;
+}

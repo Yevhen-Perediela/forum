@@ -1,0 +1,26 @@
+{% extends "main/main.html" %}
+
+
+{% block content %}
+    <div class="art">
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.text }}</p>
+    </div>
+    
+    <div class="comments">
+        <form method="POST" id="addcomm_form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Dodaj</button>
+        </form>
+        
+        {% for el_comm in article.comments.all %}
+            <!-- {% if comm.el == el %} -->
+                <div class="comment">
+                    <p class="artpass">{{ el_comm.author }}</p>
+                    <p class="comm">{{ el_comm.text }}</p>
+                </div>
+            <!-- {% endif %} -->
+        {% endfor %}
+    </div>
+{% endblock %}
